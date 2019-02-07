@@ -6,6 +6,10 @@ So to put a fine point on it - this package is created for one who knows SQL.
 
 I maintain my DB on the server and just want python to add records periodically or post results to a web app/report. This package works great as a simple solution to do just that. I call it funk because it's care free, smooth, and relaxed. The learning curve is small.
 
+```
+pip install MysqlFunk
+```
+
 Step 1: Enter the DB connection info
 
 ```
