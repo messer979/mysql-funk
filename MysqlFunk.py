@@ -9,19 +9,16 @@ class MysqlFunk:
     '''
     notes
     '''
-    def __init__(self,host,database,user,password):
-        self.host = host
-        self.database = database
-        self.user = user
-        self.password = password
-        dbconfig = {
-            'user': user,
-            'password': password,
-            'host': host,
-            'database': database
+    def __init__(self,**kwargs):
+        self.dbconfig = {
+            'user': kwargs.get('user'),
+            'password': kwargs.get('password',None),
+            'host': kwargs.get('host'),
+            'database': kwargs.get('database')
                 }
+
     def query_statement(self, statement):
-        cnx = mysql.connector.connect(**dbconfig)
+        cnx = mysql.connector.connect(**self.dbconfig)
         dbcur = cnx.cursor()
         try:
             dbcur.execute(statement)
@@ -33,8 +30,9 @@ class MysqlFunk:
         dbcur.close()
         cnx.close()
         return cursorReadout
+
     def commit_statement(self, statement):
-        cnx = mysql.connector.connect(**dbconfig)
+        cnx = mysql.connector.connect(**self.dbconfig)
         dbcur = cnx.cursor()
         try:
             dbcur.execute(statement)
