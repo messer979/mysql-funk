@@ -23,7 +23,7 @@ dbconfig = {
 
 Step 2: Startup the MysqlFunk class
 ```
-from MysqlFunk import MysqlFunk
+from MysqlFunk.MysqlFunk import MysqlFunk
 my_db = MysqlFunk(**dbconfig)
 ```
 Step 3: Update or insert
