@@ -1,4 +1,4 @@
-from MysqlFunk import MysqlFunk
+from MysqlFunk.MysqlFunk import MysqlFunk
 
 dbconfig = {
         'user': 'main',
