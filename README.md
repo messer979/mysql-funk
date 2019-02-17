@@ -29,12 +29,12 @@ my_db = MysqlFunk(**dbconfig)
 Step 3: Update or insert
 ```
 insert = "insert into test (date_time,text,text2) values (now(),'test','test')"
-my_db.query_statement(insert)
+my_db.commit_statement(insert)
 ```
 Step 4: Query away
 ```
 select = "select * from test"
-results = my_db.commit_statement(select)
+results = my_db.query_statement(select)
 ```
 Results always come back as a list of tuples. Each tuple is a row from the DB.
 
