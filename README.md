@@ -1,6 +1,6 @@
 # mysql-funk
 
-Querying and updating a MySQL database in Python doesn't get any easier than this. This package was created because the mysql-connector is too convoluted to use on the fly. For a quick data recording job, I didn't want to worry about openning and closing connections and cursors. Other packages like SQLAlchemy were not my preference because I'm comfortable with SQL. Some packages try to get rid of the SQL which just isn't a problem for me.
+Querying and updating a MySQL database in Python doesn't get any easier than this. This package was created because the mysql-connector is too convoluted to use on the fly. For a quick data recording job, I didn't want to worry about opening and closing connections and cursors. Other packages like SQLAlchemy were not my preference because I'm comfortable with SQL. Some packages try to get rid of the SQL which just isn't a problem for me.
 
 So to put a fine point on it - this package is created for one who knows SQL.
 
